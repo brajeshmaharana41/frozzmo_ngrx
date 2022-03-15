@@ -1,0 +1,128 @@
+<mat-card>
+    <div class="row justify">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="Jory">
+                    </mat-form-field>                    
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Lenz">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Country</mat-label>
+                        <mat-select>
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>                    
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>City</mat-label>
+                        <mat-select>
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>State</mat-label>
+                        <mat-select>
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Zip Code</mat-label>
+                        <textarea matInput placeholder="10560"></textarea>
+                    </mat-form-field>                    
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput placeholder="334 Furman St  Brooklyn, NY 11201 "></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Phone</mat-label>
+                        <!-- <mat-icon matSuffix>phone</mat-icon> -->
+                        <input matInput placeholder="(718) 222-9939">
+                    </mat-form-field>                   
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row wrap">
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="p-1">
+                    <div class="bord">
+                        <div fxLayout="row">
+                            <mat-radio-button class="center mr-3"></mat-radio-button>
+                            <div>
+                                <div>
+                                    <span class="price-rdo">1.67 FB</span>
+                                </div>
+                                <div>
+                                    <span class="title-rdo">UPS Delivery (10-12 Days)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="p-1">
+                    <div class="bord">
+                        <div fxLayout="row">
+                            <mat-radio-button class="center  mr-3"></mat-radio-button>
+                            <div>
+                                <div>
+                                    <span class="price-rdo">1.50 FB</span>
+                                </div>
+                                <div>
+                                    <span class="title-rdo">DHL Delivery (10-12 Days)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx" class="pt-5">
+    <div  class="p-3">
+        <button mat-button matPrefix class="dtal-btn" matStepperPrevious>
+            <mat-icon class="btn-icon">shopping_cart</mat-icon>
+            Cart
+        </button>
+    </div>
+    <div  class="p-3">
+        <button mat-button matSuffix class="dtal-btns" matStepperNext fxLayoutAlign="center center">
+            Continue 
+            <mat-icon class="btn-icon">arrow_forward</mat-icon>
+        </button>
+    </div>
+</div>

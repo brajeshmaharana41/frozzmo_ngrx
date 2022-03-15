@@ -1,0 +1,73 @@
+.head{
+    display: flex;
+    flex-wrap: wrap;
+}
+.title{
+    font-size: large;
+    font-weight: 600;
+    font-family: "Montserrat";
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.demo-table {
+    width: 100%;
+  }
+  
+  .mat-column-demo-icons {
+    width: 32px;
+    border-right: 1px solid white ;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+  .mat-column-demo-name {
+    // padding-left: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    justify-content: center;
+  }
+  
+  .mat-column-demo-symbol {
+    width: 32px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    justify-content: center;
+    color: red;
+    // font-weight: bold;
+  }
+  td.mat-cell{
+    border-bottom-style: none;
+}
+
+th.mat-header-cell{
+    border-bottom-style: none;
+}
+.btns{
+  border: 1px solid #ff9cae;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF0F3D;
+  background-color: #fdd4db;
+}
+mat-icon{
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+  padding-top: 20px;
+}
+.trs-card{
+  box-shadow: 0px 0px 1px 0px #b3b3b3;
+}

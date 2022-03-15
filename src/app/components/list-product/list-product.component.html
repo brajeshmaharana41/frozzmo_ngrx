@@ -1,0 +1,116 @@
+<div class="item-desk">
+    <div flex fxLayout="row" fxLayout.lt-sm="column" class="item-mob-bottom">
+        <div fxFlex="20">
+            <div class="bord-img" fxLayoutAlign="center center">
+                <img class="prd_img" src="{{ listProduct.images.length > 0 ? imgurl + listProduct.images[0].filename  : ''}}">
+            </div>
+        </div>
+        <div fxFlex="30" fxLayout="column" fxLayoutAlign="flex-start none" fxLayoutGap="gappx">
+            <div class="titles">
+                <span class="fonts">{{listProduct.name}}</span>
+            </div>
+            <div class="row">
+                <div class="space">
+                    <span class="review"> Reviews</span>
+                </div>
+                <div class="space">
+                    <span class="review"> Offers</span>
+                </div>
+            </div>
+            <div class="subtitles">
+                <span class="font">{{listProduct.subtitle}}</span>
+            </div>
+        </div>
+        <div fxFlex="25" fxLayout="column" fxLayoutAlign="flex-start center">
+            <div class="titles">
+                <button style="border: 1px solid #F5F5F5; color: #B3B3B3; background-color: #F5F5F5; font-size: x-small; font-weight: 500">{{listProduct.rating}}</button>
+            </div>
+            <div class="dec subtitles">
+                <span class="font">{{listProduct.description}}</span>
+            </div>    
+        </div>
+        <div fxFlex="10" fxLayout="column" fxLayoutAlign="flex-start center">
+            <div class="titles">
+                <span class="price">{{listProduct.price}}FB</span>
+            </div>    
+        </div>
+        <div fxFlex="15" fxLayout="column" fxLayoutAlign="flex-start center">
+            <div class="titles">
+                <button mat-icon-button aria-label="" (click)="toggleSelected()">
+                    <mat-icon *ngIf="selected" class="icons-head" routerLinkActive="active">favorite</mat-icon>   <mat-icon *ngIf="!selected" aria-label="" class="icons-heads">favorite_border</mat-icon>
+                </button>
+            </div>
+            <div class="subtitles dec">
+                <button mat-button  class="buy" [routerLink]="['/item-selected/'+listProduct.id]">
+                    Buy                
+                </button>
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+
+<div class="item-mob">
+    <div fxLayout="row wrap" class="item-mob-bottom">
+        <div class="item-botam">
+            <div fxFlex.xs="35" fxFlex.sm="35" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                    <div class="bord-img">
+                        <img class="prd_img" src="{{ listProduct.images.length > 0 ? imgurl + listProduct.images[0].filename  : ''}}">
+                    </div>
+                </div>
+            </div>
+    
+            <div fxFlex.xs="65" fxFlex.sm="65" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="gappx">
+                    <div>
+                        <span class="fonts">{{listProduct.name}}</span>
+                    </div>
+                    
+                    <div>
+                        <button mat-icon-button aria-label="" (click)="toggleSelected()">
+                            <mat-icon *ngIf="selected" class="icons-head" routerLinkActive="active">favorite</mat-icon>   <mat-icon *ngIf="!selected" aria-label="" class="icons-heads">favorite_border</mat-icon>
+                        </button>
+                    </div>
+                </div>
+    
+                <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                    <div>
+                        <span class="review"> Reviews</span>
+                    </div>
+    
+                    <div class="item-review">
+                        <span class="review"> Offers</span>
+                    </div>
+                </div>
+    
+                <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                    <div>
+                        <span class="font">{{listProduct.subtitle}}</span>
+                    </div>
+                </div>
+    
+                <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                    <div>
+                        <span class="font">{{listProduct.description}}</span>
+                    </div>
+                </div>
+    
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+                    <div class="item-rate">
+                       <span class="item-rating">{{listProduct.rating}}</span>
+                    </div>
+    
+                    <div>
+                        <span class="item-price">{{listProduct.id}} FB</span>
+                     </div>
+    
+                     <div>
+                        <button mat-button class="item-btn" [routerLink]="['/item-selected'+listProduct.id]">Buy</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    

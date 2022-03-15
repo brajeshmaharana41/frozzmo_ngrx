@@ -1,0 +1,85 @@
+<div>
+    <div class="filter-mob">
+        <div class="filter-top">
+            <span class="filter-title"> Price (FB) </span>
+        </div>
+        <div class="filter-bottom">
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                <mat-radio-button class="brand" *ngFor="let season of seasons" [value]="season">
+                    {{season}}
+                </mat-radio-button>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div class="filter-input">
+                        <input matInput class="input" placeholder="Min">
+                    </div>
+                    <div class="filter-input">
+                        <input  matInput class="input" placeholder="Max">
+                    </div>
+                    <div class="filter-input">
+                        <button class="list-btn">Go</button>
+                    </div>
+                    
+                </div>
+            </mat-radio-group>
+        </div>
+    </div>
+
+    <div class="filter-mob">
+        <div class="filter-top">
+            <span class="filter-title"> Brand </span>
+        </div>
+        <div  class="filter-bottom">
+            <mat-radio-group aria-label="Select an option">
+                <div class="row">
+                    <div class="col-6">
+                        <mat-radio-button class="brand" *ngFor="let brand of brands" [value]="brand">
+                            {{brand}}
+                        </mat-radio-button>
+                    </div>
+                    <div class="col-6">
+                        <mat-radio-button class="brand" *ngFor="let brandlist of brandlists" [value]="brandlist">
+                            {{brandlist}}
+                        </mat-radio-button>
+                    </div>
+                </div>
+                <button mat-button class="more">Show More</button>
+            </mat-radio-group>
+        </div>
+    </div>
+
+    <div class="filter-mob">
+        <div class="filter-top">
+            <span class="filter-title"> Color </span>
+        </div>
+        <div  class="filter-bottom">
+            <mat-radio-group aria-label="Select an option">
+                <div class="row">
+                    <div class="col-6">
+                        <mat-radio-button class="brand" *ngFor="let colorlist of colorlists" [value]="colorlist">
+                            {{colorlist}}
+                        </mat-radio-button>
+                    </div>
+                    <div class="col-6">
+                        <mat-radio-button class="brand" *ngFor="let color of colors" [value]="color">
+                            {{color}}
+                        </mat-radio-button>
+                    </div>
+                </div>
+                <button mat-button class="more">Show More</button>
+            </mat-radio-group>
+        </div>
+    </div>
+
+    <div class="filter-tops">
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="gappx">
+            <div>
+                <button mat-stroked-button class="filter-mob-btn" mat-dialog-close>Close</button>
+            </div>
+
+            <div>
+                <button mat-stroked-button class="filter-mob-btns">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+</div>

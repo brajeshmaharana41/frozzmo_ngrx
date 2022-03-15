@@ -1,0 +1,77 @@
+
+<div>    
+    <mat-card>
+        <div fxHide fxShow.gt-sm fxLayout="row" fxLayoutAlign="space-around center"  fxLayoutGap="gappx" class="pb-2 dsk-res">
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+                <div fxLayoutAlign="start start" class="pl-3">
+                    <span class="title">Items</span>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+                <div fxLayoutAlign="center start">
+                    <span class="title">Price</span>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+                <div fxLayoutAlign="center start">
+                    <span class="title">Quantity</span>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+                <div fxLayoutAlign="center start">
+                    <span class="title">Total</span>
+                </div>
+            </div>
+        </div>
+        <hr fxHide fxShow.gt-sm>
+        <div *ngFor="let cart_item of cart_item$ | async">
+            <app-add-to-cart-detls [cart_details] = cart_item></app-add-to-cart-detls>
+        </div>
+        <div>
+            <div fxLayout="row wrap">
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="55" fxFlex.lg="55" fxFlex.xl="55" class="bord">
+                    <div fxLayout="row" fxLayoutAlign="start start">
+                        <div class="pt-2">
+                            <span class="descount">Promocode:</span>
+                        </div>
+                        <div class="pt-1 pl-3">
+                            <mat-form-field appearance="outline" style="display: flex; justify-content: center; align-items: center; height: 50px;">
+                                <input matInput placeholder="000 - 000">
+                                <button mat-icon-button matSuffix style=" border: 1px solid #F5F5F5; width: 30px; height: 30px; background-color: #F5F5F5;"><mat-icon matSuffix style="color: #D8D8D8;">arrow_forward</mat-icon></button>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="35" fxFlex.lg="35" fxFlex.xl="35">
+                    <div fxLayout="row" fxLayoutAlign="space-between" class="pt-4">
+                        <div>
+                            <div class="pr-2">
+                                <span class="descount">Discount:  <span class="price">&nbsp;3 FB</span></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="pr-2">
+                                <span class="descount">Total price:  <span class="price">&nbsp;36 FB</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx" class="pt-5">
+        <div  class="p-3">
+            <button mat-button matPrefix class="dtal-btn" matStepperPrevious>
+                <mat-icon class="btn-icon">arrow_backword</mat-icon>
+                Shopping
+            </button>
+        </div>
+        <div  class="p-3">
+            <button mat-button matSuffix class="dtal-btns" matStepperNext>
+                Delivery 
+                <mat-icon class="btn-icon">local_shipping</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

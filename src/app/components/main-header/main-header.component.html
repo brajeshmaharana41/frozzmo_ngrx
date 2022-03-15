@@ -1,0 +1,91 @@
+ <div class="desk-head">
+    <mat-toolbar fxLayout="row" class="tool-bar">
+        <div fxFlex.xs="33" fxFlex.sm="33" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <mat-form-field appearance="outline" class="search-main pt-3">
+                    <input matInput placeholder="Search"  [formControl]="myControl"
+                    [matAutocomplete]="auto" class="input-font ml-2">
+                    <button mat-icon-button aria-label="" matPrefix class="ml-2">
+                        <mat-icon class="input-icon">search</mat-icon>
+                    </button>
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="sch-list" routerLink='/search-result'>
+                          {{option}}
+                        </mat-option>
+                      </mat-autocomplete>
+                </mat-form-field>
+            </div>
+        </div>
+    
+        <div fxFlex.xs="33" fxFlex.sm="33" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <div>
+                    <img routerLink="/dashboard" class="logo-img" src="../../../assets/product-details/Group -1.svg">
+                </div>
+            </div>
+        </div>
+    
+        <div fxFlex.xs="34" fxFlex.sm="34" fxFlex.md="34" fxFlex.lg="34" fxFlex.xl="34">
+            <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="gappx">
+                <button mat-icon-button aria-label="" (click)="toggleSelected()">
+                    <mat-icon *ngIf="selected" class="icons-head" routerLinkActive="active">favorite</mat-icon>   <mat-icon *ngIf="!selected" aria-label="" class="icons-head">favorite_border</mat-icon>
+                </button>
+                <a class="head-text pr-2" routerLink="/favorites" routerLinkActive="active">Favorite</a>
+    
+                <button mat-icon-button aria-label="" class="ml-xs overflow-visible">
+                    <mat-icon class="icons-head" routerLink="/cart-items" routerLinkActive="active">shopping_cart</mat-icon>
+                    <!-- <span class="notification-label" *ngIf="cartCount$ | async as count" >{{ (count > 0) ? count : '' }}</span> -->
+                </button>
+                <a class="head-text pr-3" routerLink="/cart-items" routerLinkActive="active">Cart</a>
+    
+                <div class="my-account">
+                    <img src="../../../assets/Avatar.png">
+                </div>
+            </div>
+        </div>
+    </mat-toolbar>
+ </div>
+
+<div class="mob-head">
+    <mat-toolbar class="tool-bars">
+        <div fxFlex.xs="33" fxFlex.sm="33" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <mat-icon  class="icons-head">menu</mat-icon>
+            </div>
+        </div>
+        <div fxFlex.xs="33" fxFlex.sm="33" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <div>
+                    <img routerLink="/dashboard" class="mob-logo-img" src="../../../assets/product-details/Group 17358.svg">
+                </div>        
+            </div>
+        </div>
+        <div fxFlex.xs="34" fxFlex.sm="34" fxFlex.md="34" fxFlex.lg="34" fxFlex.xl="34">
+            <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="gappx">
+                <mat-icon  class="icons-head" routerLink="/cart-items" >shopping_cart</mat-icon>
+            </div>
+        </div>
+    </mat-toolbar>
+    <mat-toolbar class="mob-search tool-bar mt-3">
+        <mat-form-field appearance="outline" class="search-mob">
+                <input matInput placeholder="Search" [formControl]="myControl"
+                [matAutocomplete]="auto" class="input-font ml-2">
+            <button mat-icon-button aria-label="" matPrefix class="ml-2">
+                <mat-icon class="input-icon">search</mat-icon>
+            </button>
+        </mat-form-field>  
+    </mat-toolbar>
+</div>
+<div>
+    <mat-toolbar class="sub-title">
+        <div class="sub-head">
+            <a class="tabs" routerLink="/dashboard" routerLinkActive="active">Dashbaord</a>
+        </div>
+        <div class="sub-head">
+            <a class="tabs" routerLink="/market-place" routerLinkActive="active">Market Place</a>
+        </div>
+        <div class="sub-head">
+            <a class="tabs" routerLink="/my-account" routerLinkActive="active" >My Account</a>
+        </div>
+    </mat-toolbar>
+</div>

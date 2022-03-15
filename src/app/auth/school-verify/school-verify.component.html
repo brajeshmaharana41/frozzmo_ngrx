@@ -1,0 +1,38 @@
+<div class="background">
+    <div style="background: linear-gradient(to left, #69bd65, #22ab72);">
+        <div class="container">
+            <div class="logo">
+                <img src="../../../assets/product-details/Group 25999.svg">
+            </div>
+            <div class="signup">
+                <mat-card class="card">
+                    <div class="left">
+                        <mat-card-title class="title">Email Verification </mat-card-title>
+                        <mat-card-title>Please verify your school provided email address.</mat-card-title>
+                        <mat-card-title class="subtitle">We have sent a 6-digit code to your email address, please 
+                            enter it below.</mat-card-title>
+                        <div class="example-container">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Enter 6 Digit Code</mat-label>
+                                <input matInput placeholder="Enter 6 Digit Code">
+                                <!-- <mat-error *ngIf="firstName.invalid">{{getnameErrorMessage()}}</mat-error>[formControl]="firstName" -->
+                            </mat-form-field>
+                        </div>
+                        <div class="top">
+                            <span style="font-size: 11px; font-family: 'Montserrat'; font-weight: 500;">Haven't received the code? - <a href="#" style="color: rgb(34,171,114); text-decoration: none;">Resend</a></span>
+                        </div>
+                        <div class="top">
+                            <span style="font-size: 11px; font-family: 'Montserrat'; font-weight: 500; display: flex; justify-content: center;">2:00</span>
+                        </div>
+                        <!-- <div class="center">
+                            <button mat-raised-button [routerLink]="['/all-set']" routerLinkActive="router-link-active" class="but">VERIFY</button>
+                        </div> -->
+                        <div *ngFor="let btn_info of btn_infos" class="pl-5 pr-5 pt-5">
+                            <app-buttons-btn  [btn_Data] = "btn_info" [routerLink]="['/all-set']" ></app-buttons-btn>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>    
+</div>

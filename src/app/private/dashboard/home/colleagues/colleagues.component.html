@@ -1,0 +1,182 @@
+
+<div class="pt-4 pb-4">
+    <div fxLayout="row warp" class="p-2">
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <span class="title">Your colleagues at St. Stephens Memorial School, NY</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div fxLayout="row wrap">
+        <!-- <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+            <div class="p-2">
+                <mat-card class="refer-card">
+                    <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="gappx" class="pt-3">
+                        <div class="pl-3">
+                            <img class="mob-img" src="../../../../../assets/Group 34057.svg">
+                        </div>
+                        
+                        <div class="pl-3">
+                            <div>
+                                <span class="earns">Invite & Earn</span>
+                            </div>
+                            <div class="pt-1">
+                                <a href="" class="earn">Click Here</a>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div> -->
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+            <div class="p-2">
+                <app-invite-btn></app-invite-btn>
+            </div>     
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" *ngFor="let Referedinfo of Referedinfos">
+            <div class="p-2">
+                <app-invitedtls-cards  [colleagues] = "Referedinfo"></app-invitedtls-cards>
+            </div>
+        </div>
+
+        <!-- <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+            <div class="p-2">
+                <mat-card class="invite-cards">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div>
+                            <button class="invite-btn" mat-mini-fab aria-label="">
+                                AK
+                            </button>
+                        </div>
+                        <div class="pl-3">
+                            <div>
+                                <span class="sub-title">Andre Korchagin</span>
+                            </div>
+                            <div class="pt-0" >
+                                <span class="sub-dec">Invited</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-1 pl-5">
+                        <button mat-button class="refer-btns ml-2">Invite Again</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+            <div class="p-2">
+                <mat-card class="invite-cards">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div>
+                            <button class="invite-btn" mat-mini-fab aria-label="">
+                                AD
+                            </button>
+                        </div>
+                        <div class="pl-3">
+                            <div>
+                                <span class="sub-title">Frac Brodai</span>
+                            </div>
+                            <div class="pt-0" >
+                                <span class="sub-dec">Invited</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-1 pl-5">
+                        <button mat-button class="refer-btns ml-2">Invite Again</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+            <div class="p-2">
+                <mat-card class="invite-cards">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div>
+                            <button class="invite-btn" mat-mini-fab aria-label="">
+                                IM
+                            </button>
+                        </div>
+                        <div class="pl-3">
+                            <div>
+                                <span class="sub-title">Ivan Mesherinov</span>
+                            </div>
+                            <div class="pt-0" >
+                                <span class="sub-dec">Placed 3 orders this  month</span>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+            <div class="p-2">
+                <mat-card class="invite-cards">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div>
+                            <button class="invite-btn" mat-mini-fab aria-label="">
+                                JG
+                            </button>
+                        </div>
+                        <div class="pl-3">
+                            <div>
+                                <span class="sub-title">Jake Grella</span>
+                            </div>
+                            <div class="pt-0" >
+                                <span class="sub-dec">Placed 1 orders this  month</span>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+            <div class="p-2">
+                <mat-card class="invite-cards">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div>
+                            <button class="invite-btn" mat-mini-fab aria-label="">
+                                KN
+                            </button>
+                        </div>
+                        <div class="pl-3">
+                            <div>
+                                <span class="sub-title">Kalvin North</span>
+                            </div>
+                            <div class="pt-0" >
+                                <span class="sub-dec">Placed No orders this month.</span>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+            <div class="p-2">
+                <mat-card class="invite-cards">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div>
+                            <button class="invite-btn" mat-mini-fab aria-label="">
+                                KW
+                            </button>
+                        </div>
+                        <div class="pl-3">
+                            <div>
+                                <span class="sub-title">Kyle W. Cartmell</span>
+                            </div>
+                            <div class="pt-0" >
+                                <span class="sub-dec">Placed 5 orders this  month</span>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div> -->
+    </div>
+</div>

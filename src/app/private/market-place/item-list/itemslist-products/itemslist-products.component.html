@@ -1,0 +1,23 @@
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading$ | async; else productList"></mat-progress-bar>
+<ng-template #productList>
+    <div *ngFor="let products of products$ | async">
+        <app-list-product [listProduct] = "products"></app-list-product>
+    </div>
+    <div class="item-desk">
+        <mat-paginator  #paginator [length]="totalRows$" 
+                    [pageIndex]="currentPage$" 
+                    [pageSize]="pageSize$"
+                    [pageSizeOptions]="pageSizeOptions" 
+                    (page)="pageChanged($event)"
+                    aria-label="Select page" 
+                    class="filter">
+        </mat-paginator>
+    </div>  
+
+
+    <div class="item-mob">
+        <div class="center">
+            <button mat-button class="more">Show more</button>
+        </div>
+    </div>
+</ng-template>

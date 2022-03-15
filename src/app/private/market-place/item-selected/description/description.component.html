@@ -1,0 +1,132 @@
+<div style="background: #fafafa;">
+    <div fxLayout="row wrap" style="margin-bottom: 15px; margin-top: 20px;">
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="65" fxFlex.lg="65" fxFlex.xl="65">
+            <div>
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" class="sub-items">
+                    <div class="sub-items" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div class="select">
+                            <img class="zomin" src="{{ description_data.images.length > 0 ? imgurl + description_data.images[0].filename  : ''}}">
+                        </div>
+                    </div>
+                </div>
+
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=80 fxFlex.lg="80" fxFlex.xl="80">
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                        <div class="selects">
+                            <div class="icon">
+                                <button mat-icon-button aria-label="" (click)="toggleSelected()">
+                                    <mat-icon *ngIf="selected" class="icons-head">favorite</mat-icon>   <mat-icon *ngIf="!selected" aria-label="" class="icons-head">favorite_border</mat-icon>
+                                </button>
+                            </div>
+                            <div class="center">
+                                <img class="zom" src="{{ description_data.images.length > 0 ? imgurl + description_data.images[0].filename  : ''}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx" class="dots">
+                        <mat-icon class="dot iconcol">fiber_manual_record</mat-icon>
+                        <mat-icon class="dot">fiber_manual_record</mat-icon>
+                        <mat-icon class="dot">fiber_manual_record</mat-icon>
+                        <mat-icon class="dot">fiber_manual_record</mat-icon>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="35" fxFlex.lg="35" fxFlex.xl="35">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <div>
+                    <div style="margin-bottom: 15px;" >
+                        <span class="title">{{description_data.name}}</span>
+                    </div>       
+                    <div style="margin-bottom: 15px;">
+                        <span class="subtitle">{{description_data.subtitle}}</span>
+                    </div>
+                    <div>
+                        <section class="example-section">
+                            <span class="example-list-section dec">
+                              Product Description
+                            </span>
+                            <div class="example-list-section">
+                              <ul>
+                                <li>
+                                    {{description_data.generic_name}}
+                                </li>
+                                <li>
+                                    {{description_data.generic_name}}
+                                </li>
+                                <li>
+                                    {{description_data.generic_name}}
+                                </li>
+                                <li>
+                                    {{description_data.generic_name}}
+                                </li>
+                                <li>
+                                    {{description_data.generic_name}}
+                                </li>
+                                <li>
+                                    {{description_data.generic_name}}
+                                </li>
+                                <li>
+                                    {{description_data.generic_name}}
+                                </li>
+                              </ul>
+                            </div>
+                          </section>
+                        <section class="carts">
+                            <div>
+                                <div class="bottom">
+                                    <span class="family titles"> {{description_data.price}} FB</span>
+                                </div>
+                                <div fxLayout="row" class="bottom">
+                                    <div class="center">
+                                        <span class="family subtitles">Color:</span>
+                                    </div>
+                                    <div class="center" style="padding-left: 20px;">
+                                        <div style="border: 6px solid #DE4D8A; border-radius: 6px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div fxLayout="row" class="bottom">
+                                    <div class="center">
+                                        <span class="family shop">Shop</span>
+                                    </div>
+                                    <div class="pl-5">
+                                        <div style="border: 2px solid #F0F0F0; border-radius: 30px; width: 60px;">
+                                            <div fxLayout="row">
+                                                <div center><mat-icon class="rate center">star</mat-icon></div>
+                                                <div class="center"><span class="family rate">{{description_data.rating}}</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div fxLayout="row" class="bottom">
+                                    <div class="center">
+                                        <mat-icon class="icon">local_shipping</mat-icon>
+                                    </div>
+                                    <div class="center">
+                                        <span class="family decs">Delivery of  1 FB, tomorrow</span>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <button mat-button class="family cart" routerLink="/cart-items">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                                <div fxLayout="row" >
+                                    <div class="center">
+                                        <mat-icon class="icon">favorite</mat-icon>
+                                    </div>
+                                    <div class="center">
+                                        <span class="family dec">Favorite</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

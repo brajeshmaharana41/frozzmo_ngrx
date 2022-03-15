@@ -1,0 +1,35 @@
+<mat-card class="card">
+    <div class="item-img">
+        <div class="like-icon">
+            <!-- <mat-icon class="likes-icon">favorite_border</mat-icon> -->
+            <button mat-icon-button aria-label="" (click)="toggleSelected()">
+                <mat-icon *ngIf="selected" class="likes-icon">favorite</mat-icon>   <mat-icon *ngIf="!selected" aria-label="" class="likes-icons">favorite_border</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="like-img">
+        <div class="center">
+            <img src="{{product.image}}">
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx" class="like-padd">
+        <div>
+            <span class="like-title">{{product.title}}</span>
+            <div>
+                <span class="like-subtitle">{{product.subtitle}}</span>
+            </div>
+        </div>
+        <div class="like-rate">
+            <span class="like-rates">4.5</span>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx" class="like-padd">
+        <div>
+            <span class="like-price">{{product.price}} FB</span>
+        </div>
+        <div *ngFor="let btn_info of btn_infos">
+            <app-buttons-btn [btn_Data] = "btn_info" [routerLink]="['/item-selected']"></app-buttons-btn>
+        </div>
+    </div>
+</mat-card>

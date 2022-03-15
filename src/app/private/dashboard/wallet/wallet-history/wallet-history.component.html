@@ -1,0 +1,127 @@
+<div class="pt-5 pb-3">
+    <div fxLayout="row warp" class="p-2">
+        <div fxFlex.xs="100" fxFlex.sm="30" fxFlex.md="30" fxFlex.lg="30" fxFlex.xl="30">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <span class="title">Overview</span>
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="70" fxFlex.md="70" fxFlex.lg="70" fxFlex.xl="70">
+            <div class="weeks">
+                <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="gappx">
+                    <div class="pr-3">
+                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="date">
+                            <mat-button-toggle value="bold">Days</mat-button-toggle>
+                            <mat-button-toggle value="italic">Weeks</mat-button-toggle>
+                            <mat-button-toggle value="underline" style="background: #00aa72; color: white;">Months</mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                    <div>
+                        <button class="dates">
+                            <mat-icon class="range">date_range</mat-icon>
+                            <span style="color: #5A607F">Jan, 2019 - Dec, 2019</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="week p-2">
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+            <div>
+                <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="date">
+                    <mat-button-toggle value="bold">Days</mat-button-toggle>
+                    <mat-button-toggle value="italic">Weeks</mat-button-toggle>
+                    <mat-button-toggle value="underline" style="background: #00aa72; color: white;">Months
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+            <div>
+                <button class="dates">
+                    <mat-icon class="range">date_range</mat-icon>
+                    <span style="color: #5A607F">Jan, 2019 - Dec, 2019</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div fxLayout="row wrap">
+    <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+        <div class="p-2">
+            <mat-card class="view-card" routerLink="/wallet">
+                <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                    <div>
+                        <span class="view-title">Wallet Balance</span>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+                    <div>
+                        <span class="view-price">100 FB</span>
+                    </div>
+                    <div class="view-desk">
+                        <button mat-fab class="view-btn">
+                            <mat-icon class="desk-icons">cached</mat-icon>
+                        </button>
+                    </div>
+                    <div class="view-mob">
+                        <button mat-mini-fab class="view-btn">
+                            <mat-icon class="mob-icons">cached</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+        <div class="p-2">
+            <mat-card class="view-card" routerLink="/wallet">
+                <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                    <div>
+                        <span class="view-title">Amount Used</span>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+                    <div>
+                        <span class="view-price">10 FB</span>
+                    </div>
+                    <div class="view-desk">
+                        <button mat-fab class="view-btns">
+                            <mat-icon class="desk-icons">arrow_upward</mat-icon>
+                        </button>
+                    </div>
+                    <div class="view-mob">
+                        <button mat-mini-fab class="view-btns">
+                            <mat-icon class="mob-icons">arrow_upward</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+        <div class="p-2">
+            <mat-card class="view-card" routerLink="/wallet">
+                <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                    <div>
+                        <span class="view-title">Remaining in wallet</span>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+                    <div>
+                        <span class="view-price">90 FB</span>
+                    </div>
+                    <div class="view-desk">
+                        <button mat-fab class="view-btn">
+                            <mat-icon class="desk-icons">account_balance_wallet</mat-icon>
+                        </button>
+                    </div>
+                    <div class="view-mob">
+                        <button mat-mini-fab class="view-btn">
+                            <mat-icon class="mob-icons">account_balance_wallet</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+

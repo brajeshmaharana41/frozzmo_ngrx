@@ -1,0 +1,101 @@
+<mat-card>
+    <h4 style="font-family: Montserrat;">Total Payable <b>$ 37.50(2 Items)</b></h4>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
+            <section class="example-section">
+                <p>
+                    <mat-checkbox>
+                        <div class="row" style="padding-left: 12px; padding-top: 25px;">
+                            <mat-icon style="color: #00AA75">account_balance_wallet</mat-icon>
+                            <span style="padding-left: 5px; color:#00AA75"  class="tbls">frizzmo Wallet</span>
+                        </div>
+                        <span class="bls">Available balance - 20 FB</span>
+                    </mat-checkbox>
+                </p>
+                <p>
+                    <mat-checkbox>
+                        <div class="row" style="padding-left: 12px; padding-top: 25px;">
+                            <mat-icon style="color:#00AA75">credit_card</mat-icon>
+                            <span style="padding-left: 5px; color:#00AA75"  class="tbls">Credit/ Debit Card</span>
+                        </div>
+                        <span  class="bls">Pay - 17.50 FB</span>
+                    </mat-checkbox>
+                </p>      
+            </section>
+            <div>
+                <div fxLayout="row wrap">
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="30" fxFlex.lg="30" fxFlex.xl="30">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Credit Card</mat-label>
+                            <input matInput placeholder="Card Number">
+                            <button mat-icon-button matPrefix>
+                                <mat-icon style="color: #EAEAEA; font-size: large;">credit_card</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>MM/YYYY</mat-label>
+                            <input matInput placeholder="Enter">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="30" fxFlex.lg="30" fxFlex.xl="30">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Name on Card</mat-label>
+                            <input matInput placeholder="Enter">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>CVV</mat-label>
+                            <input matInput placeholder="Enter">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+            <mat-card class="item-detal">
+                <div>
+                    <div class="space">
+                        <span class="title">Number of Items</span>
+                        <span class="price">2</span>
+                    </div>
+                    <hr>
+                    <div class="space">
+                        <span class="title">2 item subtotal</span>
+                        <span class="price">39 FB</span>
+                    </div>
+                    <div class="space">
+                        <span class="title">Discount</span>
+                        <span class="price">- 3 FB</span>
+                    </div>
+                    <div class="space">
+                        <span class="title">Delivery</span>
+                        <span class="price">1.5 FB</span>
+                    </div>
+                    <hr>
+                    <div class="space">
+                        <span class="titles">Total</span>
+                        <span class="prices">37.50 FB</span>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</mat-card>
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx" class="pt-5">
+    <div  class="p-3">
+        <button mat-button matPrefix class="dtal-btn" matStepperPrevious>
+            <mat-icon class="btn-icon">local_shipping</mat-icon>
+            Delivery
+        </button>
+    </div>
+    <div  class="p-3">
+        <button mat-button matSuffix class="dtal-btns" matStepperNext>
+            Confirm 
+            <mat-icon class="btn-icon">done</mat-icon>
+        </button>
+    </div>
+</div>

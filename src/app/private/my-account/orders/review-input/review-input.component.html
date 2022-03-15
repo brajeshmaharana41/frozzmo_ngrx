@@ -1,0 +1,128 @@
+<app-main-header></app-main-header>
+<div class="background">
+    <div class="container">
+        <div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+                <div>
+                    <div class="pt-5 pb-2 pl-3">
+                        <div class="pb-4">
+                            <span class="order-title">Create Review</span>
+                        </div>
+                        <div>
+                            <span class="order-subtitle">School Bag Canvas with Art Kit</span>
+                        </div>
+                    </div>
+                    <div class="bord pt-2">
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx" class="pt-3 pb-3">
+                        <div fxFlex.xs="100" fxFlex.sm="60" fxFlex.md="50" fxFlex.lg="40" fxFlex.xl="40">
+                            <div fxLayoutAlign="space-between start">
+                                <div class="brd-rev">
+                                    <img src="../../../../../assets/product1.png">
+                                </div>
+                                <div class="brd-rev" fxLayout="column">
+                                    <span class="prd-det pt-2">Bag of Assorted Stationery</span>
+
+                                    <span class="prd-det pt-2">Crayons , Sketch Pens.</span>
+                                    
+                                    <span class="prd-det pt-2">Total <span class="rev-price">10.0 FB</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bord pt-2">
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                        <div class="pt-4 pb-2 pl-3">
+                            <div class="pb-4">
+                                <span class="order-title2">Overall Rating</span>
+                            </div>
+                            <div fxLayout="row">
+                                <div>
+                                    <a (click)="toggleSelected1()">
+                                        <mat-icon *ngIf="!selected" class="rev-icon" routerLinkActive="active"> star_border </mat-icon>   <mat-icon *ngIf="selected" aria-label="" class="rev-sel-icon">star</mat-icon>
+                                    </a>
+                                </div>
+                                <div class="pl-2 pr-2">
+                                    <a (click)="toggleSelected2()">
+                                        <mat-icon *ngIf="!selected" class="rev-icon" routerLinkActive="active"> star_border </mat-icon>   <mat-icon *ngIf="selected" aria-label="" class="rev-sel-icon">star</mat-icon>
+                                    </a>                                </div>
+                                <div>
+                                    <a (click)="toggleSelected3()">
+                                        <mat-icon *ngIf="!selected" class="rev-icon" routerLinkActive="active"> star_border </mat-icon>   <mat-icon *ngIf="selected" aria-label="" class="rev-sel-icon">star</mat-icon>
+                                    </a>                                </div>
+                                <div class="pl-2 pr-2">
+                                    <a (click)="toggleSelected4()">
+                                        <mat-icon *ngIf="!selected" class="rev-icon" routerLinkActive="active"> star_border </mat-icon>   <mat-icon *ngIf="selected" aria-label="" class="rev-sel-icon">star</mat-icon>
+                                    </a>                                </div>
+                                <div>
+                                    <a (click)="toggleSelected5()">
+                                        <mat-icon *ngIf="!selected" class="rev-icon" routerLinkActive="active"> star_border </mat-icon>   <mat-icon *ngIf="selected" aria-label="" class="rev-sel-icon">star</mat-icon>
+                                    </a>                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bord pt-2">
+                    </div>
+                    <div class="pt-4 pb-0 pl-3">
+                        <div class="pb-4">
+                            <span class="order-title2">Add A Healdline</span>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx" class="pt-0 pb-3 pl-3">
+                        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                            <div class="brd-rev" fxLayout="column">
+                                <mat-form-field class="rev-input">
+                                    <input matInput placeholder="What's most important to know?">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-0 pl-3">
+                        <div class="pb-4">
+                            <span class="order-title2">Add a written review</span>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx" class="pt-0 pb-3 pl-3">
+                        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                            <div class="brd-rev" fxLayout="column">
+                                <mat-form-field class="rev-input">
+                                    <input matInput placeholder="What did you like or dislike? What did you use this product for?">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4 pb-0 pl-3">
+                        <div class="pb-4" fxLayout="column">
+                            <span class="order-title2 pb-3">Add a photo or video</span>
+                            <span class="order-subtitle">Shoppers find images and videos more helpful than text alone.</span>
+                        </div>
+                        <mat-card class="rev-uplode" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                            <mat-icon>add</mat-icon>
+                            <span class="rev-up pt-2">Add Photo or Video</span>
+                        </mat-card>
+                    </div>
+                    
+                    <div class="pt-4 pb-0 pl-3">
+                        <div class="pb-4" fxLayout="column">
+                            <span class="order-title2 pb-3">Choose your public name</span>
+                            <span class="order-subtitle">This is how you'll appear to other customers</span>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx" class="pt-0 pb-3 pl-3">
+                        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                            <div class="brd-rev" fxLayout="column">
+                                <mat-form-field class="rev-input">
+                                    <mat-icon matPrefix class="input-icon mr-2">person_pin</mat-icon>
+                                    <input matInput placeholder="What did you like or dislike? What did you use this product for?">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

@@ -1,0 +1,19 @@
+.center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+a{
+    padding: 10px;
+    font-size: 13px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #B3B3B3;
+}

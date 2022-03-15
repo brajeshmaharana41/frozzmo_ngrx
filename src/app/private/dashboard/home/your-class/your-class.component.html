@@ -1,0 +1,178 @@
+<!-- (click)="toggle_nameShow()" -->
+<div >
+    <div class="pt-4 pb-3">
+        <div fxLayout="row warp" class="p-2">
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+                <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                    <span class="title">Your Classes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="view">
+            <div class="card">
+                <mat-card-content style="display: flex; justify-content: center; text-align: center;">
+                    <div class="margin">
+                        <span class="subtitle">You have not created any of your class. you can create your Google class account
+                            or create a class by clicking create a manual button. </span>
+                    </div>   
+                </mat-card-content>
+                <mat-card-content style="display: flex; justify-content: center; text-align: center;">
+                    <div>
+                        <button mat-button class="sub" (click)="googleclsDialog()">Import Google Classroom <mat-icon class="inport-icon">group</mat-icon></button>
+    
+                        <button mat-button class="sub" (click)="addclsDialog()">Create Manually</button>
+    
+                        <button mat-button class="sub" (click)="addstuDialog()">Import Students</button>
+                    </div>
+                </mat-card-content>    
+            </div>
+        </div>    
+    </div>
+</div>
+<!-- *ngIf="showClass" -->
+<div class="pt-3 pb-3">
+    <div fxLayout="row warp" class="p-2">
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+                <div>
+                    <span class="title">Your Classes</span>
+                </div>
+                <div>
+                   <button mat-button matSuffix class="drop-btn" [matMenuTriggerFor]="menu">Add new class
+                    <mat-icon>arrow_drop_down</mat-icon>
+                   </button>
+                   <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="addclsDialog()">Create a new class</button>
+                    <button mat-menu-item (click)="googleclsDialog()">Google Classroom <mat-icon class="menu_icon">group</mat-icon></button>
+                  </mat-menu>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="desk-cls">
+        <div fxLayout="row warp" fxLayoutAlign="space-between center" class="your-navbar">
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div fxLayout="row" fxLayoutAlign="start center" class="pt-3 pb-3">
+                    <div class="pl-2">
+                        <a href="#" class="cls-btn">Maths - 3 A</a>
+                    </div>
+                    <div class="pl-3">
+                        <a href="#" class="cls-btn ">English</a>
+                    </div>
+                    <div class="pl-3">
+                        <a href="#" class="cls-btn">Science</a>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div fxLayout="row" fxLayoutAlign="end start" class="pt-3 pb-3">
+                    <div class="pr-3">
+                        <button mat-button class="cls-btns" (click)="reupdateDialog()">Class Options</button>
+                    </div>
+                    <div class="pr-3">
+                        <button mat-button class="cls-btns" (click)="addstuDialog()">Add Student</button>
+                    </div>
+                    <div>
+                        <button mat-button class="cls-btns" (click)="invteDialog()">Invite Class</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mob-cls">
+        <div fxLayout="row warp" fxLayoutAlign="space-between center" class="your-navbar">
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="pt-2 pb-2">
+                    <div>
+                        <button mat-button class="cls-btns" (click)="reupdateDialog()">Class Options</button>
+                    </div>
+                    <div>
+                        <button mat-button class="cls-btns" (click)="addstuDialog()">Add Student</button>
+                    </div>
+                    <div>
+                        <button mat-button class="cls-btns" (click)="invteDialog()">Invite Class</button>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="pt-2 pb-2">
+                    <div class="pl-2">
+                        <a href="#" class="cls-btn">Maths - 3 A</a>
+                    </div>
+                    <div>
+                        <a href="#" class="cls-btn ">English</a>
+                    </div>
+                    <div class="pr-2">
+                        <a href="#" class="cls-btn">Science</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <mat-card>
+        <div fxLayout="row warp">
+            <div fxFlex.xs="100" fxFlex.sm="35" fxFlex.md="35" fxFlex.lg="35" fxFlex.xl="35">
+                <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                    <div>
+                        <mat-form-field appearance="outline" class="search-main">
+                            <input matInput placeholder="Search" class="input-font ml-2">
+                            <button mat-icon-button aria-label="" matPrefix class="ml-2">
+                                <mat-icon class="input-icon">search</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <!-- <div class="pl-3">
+                        <span class="your-stus">Total 20 Students</span>
+                    </div> -->
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="65" fxFlex.md="65" fxFlex.lg="65" fxFlex.xl="65" class="check-stu">
+                <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="gappx">
+                    <div>
+                        <mat-checkbox class="your-stu"> Students on Frizzmo only</mat-checkbox>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="65" fxFlex.md="65" fxFlex.lg="65" fxFlex.xl="65" class="check-stus">
+                <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                    <div>
+                        <mat-checkbox class="your-stu"> Students on Frizzmo only</mat-checkbox>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z0 demo-table">
+            <!-- Position Column -->
+            <ng-container matColumnDef="demo-icons">
+                <td mat-cell *matCellDef="let element">
+                    <button class="btns">
+                        <!-- <mat-icon>{{element.icons}}</mat-icon> -->
+                        <img src={{element.icons}}>
+                    </button>
+                </td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="demo-name">
+              <td mat-cell *matCellDef="let element">{{element.name}}<br><span class="your-sec-cls">Standard - 3 A</span></td>
+              <span>Standard - 3 A</span>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="demo-symbol">
+              <td mat-cell *matCellDef="let element"> ${{element.symbol}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="demo-item">
+                <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button (click)="rewardclsDialog()">
+                        <mat-icon class="tab-icon">{{element.item}}</mat-icon>
+                    </button>
+                </td>
+              </ng-container>
+            <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </mat-card>
+</div>

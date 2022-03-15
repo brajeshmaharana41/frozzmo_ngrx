@@ -1,0 +1,47 @@
+<app-main-header></app-main-header>
+<div class="back-color">
+    <div class="container">
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="pt-5">
+            <div>
+                <span class="title">Favorites</span>
+            </div>
+            <div>
+                <mat-button-toggle-group #group="matButtonToggleGroup" class="sort">
+                    <mat-button-toggle value="left" aria-label="Text align center" class="rod">
+                      <mat-icon class="fav-icon" routerLinkActive="active">view_module</mat-icon>
+                    </mat-button-toggle>
+                    <mat-button-toggle value="center" aria-label="Text align center" class="rod">
+                      <mat-icon class="fav-icon" routerLinkActive="active">view_stream</mat-icon>
+                    </mat-button-toggle>
+                    <mat-button-toggle value="right" aria-label="Text align center" class="rod">
+                      <mat-icon class="fav-icon" routerLinkActive="active">view_headline</mat-icon>
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+        </div>
+        <div class="pt-3">
+          <mat-progress-bar mode="indeterminate" *ngIf="isLoading$ | async; else productList"></mat-progress-bar>
+            <ng-template #productList>
+              <div *ngFor="let products of products$ | async">
+                <app-list-product [listProduct] = "products"></app-list-product>
+              </div>
+              <div class="item-desk">
+                <mat-paginator  #paginator [length]="totalRows$" 
+                    [pageIndex]="currentPage$" 
+                    [pageSize]="pageSize$"
+                    [pageSizeOptions]="pageSizeOptions" 
+                    (page)="pageChanged($event)"
+                    aria-label="Select page" 
+                    class="filter">
+                </mat-paginator>
+              </div>
+              <div class="item-mob">
+                  <div class="center">
+                      <button mat-button class="more">Show more</button>
+                  </div>
+              </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>
